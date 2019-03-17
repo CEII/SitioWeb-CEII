@@ -1,85 +1,137 @@
-:root{
-	box-sizing: border-box;
-	font-size: calc(0.05em + 1vw);
+@import url('https://fonts.googleapis.com/css?family=Roboto:500');
+
+:root {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-*, ::before, ::after{
-	box-sizing: inherit;
-}
-
-body {
+* {
     margin: 0;
-    background: url(public/img/background.jpg);   
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: left top;    
-}
-
-header {    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header img {
-    margin-top: 2em;
-    height: 10em;    
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1em;
-}
-
-section img {    
-    height: 25em;
-}
-
-footer {  
-    display: block;
-    text-align: center;  
-}
-
-footer ul {
     padding: 0;
 }
 
-footer li{        
-    display: inline;
-    padding: 1.5em;           
+*,
+::before,
+::after {
+    box-sizing: inherit;
 }
 
-footer nav a {
+body {
+    max-height: 100vh;
+    background: #033c71;
+}
+
+main {
+    max-height: 100vh;
+    text-align: center;
+}
+
+.placeholder {
+    color: #ffffff;
+    text-align: center;
+    font-size: 3em;
+    padding: 100px 0;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+}
+
+
+.socials {
+    position: fixed;
+    width: 100%;
+    display: block;
+    bottom: 0;
+}
+
+.fab {
+    transition: all .2s ease-in-out;
+    color: #ffffff;
+}
+
+.fab:hover {
+    transform: scale(1.6);
+}
+
+.fa-facebook-square:hover {
+    color: #4267b2;
+}
+
+.fa-github:hover {
+    color: #000000;
+}
+
+.fa-twitter-square:hover {
+    color: #38A1F3;
+}
+
+.fa-instagram:hover {
+    color: #231F20;
+}
+
+.fa-slack:hover {
+    color: #3AAF85;
+}
+
+.socials li {
+    display: inline-block;
+    padding: 1.5em;
+}
+
+.socials nav a {
     text-decoration: none;
-    color:#ffffff;    
-    font-size: 2em;  
+    color: #ffffff;
+    font-size: 3em;
 }
 
-footer nav a i {
-    border: 2px solid #ffffff;
-    border-radius: 500px;  
-    padding: 0.4em;
-    background-color: #032453;
-}
-
-footer nav a i:hover {
-    background-color: #586f8fbb;
-}
-
-@media only screen and (max-width: 320px) {
-    body {
-        margin-top: 10em;
+@media only screen and (min-width : 320px) {
+    .placeholder h3 {
+        font-size: 48px;
     }
 
-    section img {
-        height: 12em;
-        width: 25em;        
+    .placeholder p {
+        font-size: 24px;
     }
 
-    footer nav a i {
-        border: 0.4px solid #ffffff;
+    img {
+        /* width: 100vw;
+        height: 100px; */
+        display: none;
+    }
+    /* .socials{
+        position: relative;
+    } */
+    .socials li {
+        padding: .5em;
+    }
+}
+
+@media only screen and (min-width : 360px) {
+    
+    img {
+        width: 100vw;
+        height: 200px;
+        display: block;
+    }
+    .socials li {
+        padding: .5em;
+    }
+}
+
+@media only screen and (min-height:1024px){
+    img{
+        width: 100vw;
+        height: 500px;
+    }
+    .socials{
+        position: relative;
+    }
+}
+
+@media (orientation:landscape){
+    .socials{
+        position: relative;
     }
 }
