@@ -30,7 +30,7 @@ main {
     color: #ffffff;
     text-align: center;
     font-size: 3em;
-    padding: 100px 0;
+    padding: 1.5em 0;
 }
 
 img {
@@ -40,7 +40,7 @@ img {
 
 
 .socials {
-    position: fixed;
+    position: relative;
     width: 100%;
     display: block;
     bottom: 0;
@@ -96,13 +96,9 @@ img {
     }
 
     img {
-        /* width: 100vw;
-        height: 100px; */
         display: none;
     }
-    /* .socials{
-        position: relative;
-    } */
+    
     .socials li {
         padding: .5em;
     }
@@ -125,12 +121,6 @@ img {
         width: 100vw;
         height: 500px;
     }
-    .socials{
-        position: relative;
-    }
-}
-
-@media (orientation:landscape){
     .socials{
         position: relative;
     }
